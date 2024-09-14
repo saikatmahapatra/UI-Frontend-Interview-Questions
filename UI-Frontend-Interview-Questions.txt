@@ -4,9 +4,8 @@
 # Follow me on LinkedIn : https://github.com/saikatmahapatra
 ####################################################################################
 
-
 =========================================================
-Part 1: Web Fundamentals
+1. Web Fundamentals
 =========================================================
 1. What happens when you type http://www.google.com
 2. Difference between http and https.
@@ -18,10 +17,8 @@ Part 1: Web Fundamentals
 8. What are the main principles of UI/UX design?
 9. What is Web Accessibility? Must know some html attributes such as (aria-label, role, aria-hidden etc) also know about testing tools such as NVDA screen reader, JAWS, aXe DevTools etc.
 
-
-
 =========================================================
-Part 2: HTML5/CSS3
+2. HTML, HTML5, CSS, CSS3
 =========================================================
 1. What is doctype ? If you dont write what will happen? HTML5 semantic elements? What are the benefits of Semantic tags?
 2. Box model - margin, border, padding 
@@ -45,11 +42,8 @@ https://css-tricks.com/building-skeleton-screens-css-custom-properties/
 18. What is web accessibility ? How to make a anchor link tag so that screen read treat is as button (<a href="" role="button">)
 19. What is BEM (Block, Element, Modifier) methodology in CSS?
 
-
-
 =========================================================
-Part 3: JavaScript Important Concepts/Fundamentals
-Tags: Object Oriented JS, ES6, jQuery
+3. JavaScript Important Concepts/Fundamentals (ES6, jQuery)
 =========================================================
 [Whenever you are preparing these questions be ready for advantage, disadvange, why need these kind of questions]
 
@@ -187,13 +181,8 @@ console.log(arr)
 45. What is == , === operators? Difference?
 
 
-
-
-
-
-
 =========================================================
-Part 4: JS: What will be the output & why
+4. What will be the output & why
 =========================================================
 
 (1) What will be the output & why?
@@ -278,11 +267,9 @@ function printAge(data){
 }
 printAge({age: 30}); // output = 3
 
-
-
 =========================================================
-Part 5: Design Patterns, Rendering Patterns, performance Patterns
-I was asked in many Product based companies
+5. Design Patterns, Rendering Patterns, performance Patterns
+(Asked in many Product based companies)
 =========================================================
 1. Explain MVC, MVVM, MVP
 2. Singleton Design Patterns. Explain with example
@@ -298,11 +285,8 @@ Lazy load other routes and non-critical assets.
 <script defer src="app.js"></script>
 7. What is Micro Frontend architecture? Explain 
 
-
-
-
 =========================================================
-Part 6: Angular 2/4/5/6/7/8/9/10+
+6. Angular 2/4/5/6/7/8/9/10+
 =========================================================
 1. What is lazy loading
 2. How to know an angular app is having lazy loading features without seeing codebase
@@ -315,11 +299,8 @@ Part 6: Angular 2/4/5/6/7/8/9/10+
 8. Rxjs operators (state handling)
 9. Do you know the ngrx library? Explain Redux architecture
 10. What is @HostBinding , @HostListerer
-
 @HostListerer is used to listen any events generated for a element
 @HostBinding binds attribute to that host element
-
-
 11. What is the difference between on push & default strategy
 12. What is ViewProvider, purpose of it
 13. How to handle styling? Explain viewEncapsulation
@@ -346,9 +327,8 @@ Part 6: Angular 2/4/5/6/7/8/9/10+
 13. Explain how many ways there are for performance optimization?
 
 
-
 =========================================================
-Part 7: CI/CD DevOps, Git
+7. CI/CD DevOps, Git
 =========================================================
 1. How is Git different from Subversion (SVN)?
 2. What is the correct syntax to add a message to a commit?
@@ -360,12 +340,8 @@ Part 7: CI/CD DevOps, Git
 8. What has to be run to squash the last N commits into a single commit?
 9. What is a yml file?
 
-
-
-
-
 =========================================================
-Part 8: Agile/Managerial Round
+8. Agile/Managerial Round
 =========================================================
 1. What is difference agile and waterfall (explained)
 2. Scrum 3 roles of Scrum (Product Owner, Scrum Master, Dev Team)
