@@ -1,0 +1,67 @@
+####################################################################################
+# Angular Interview Questions 2024
+####################################################################################
+1. What is Angular, and how is it different from AngularJS? 
+2. How does the Angular CLI work? 
+3. What is two-way data binding in Angular? 
+4. Explain the role of decorators in Angular. 
+5. What are components in Angular? 
+6. How does change detection work in Angular? 
+7. What is a service in Angular, and how do you use it? 
+8. What are pipes, and how do you create a custom pipe in Angular? 
+9. What is RxJS, and how is it used in Angular? 
+10. Explain the concept of observables and promises. 
+11. What are directives in Angular, and how are they used? 
+12. What is the difference between structural and attribute directives? 
+13. What is dependency injection, and why is it important in Angular? 
+14. How do you handle forms in Angular? 
+15. What is the difference between template-driven and reactive forms? 
+16. How do you implement routing in Angular? 
+17. What is lazy loading, and how does Angular support it? 
+18. Explain Angular’s lifecycle hooks. 
+19. How do you optimize an Angular application for performance? 
+20. What is Ahead-of-Time (AOT) compilation? 
+21. How do you handle error handling in Angular? 
+22. What is Angular Universal, and why is it used? 
+23. How does Angular handle HTTP requests? 
+24. How do you use interceptors in Angular? 
+25. Explain the difference between NgModule and Component. 
+26. What is Angular Ivy, and how does it improve the framework? 
+27. What are the new features in Angular 18? 
+28. What is the purpose of Angular Elements? 
+29. What are Angular animations, and how do you implement them? 
+30. What is view encapsulation in Angular? 
+31. How does Angular handle security concerns like XSS? 
+32. How does Angular handle state management? 
+33. What are resolvers in Angular routing? 
+34. How do you debug an Angular application? 
+35. What is the difference between ngIf and hidden attributes? 
+36. How do you manage shared state between components in Angular? 
+37. What is NgZone, and how is it used in Angular? 
+38. What are custom directives in Angular? 
+39. How do you implement internationalization (i18n) in Angular? 
+40. What is content projection in Angular? 
+41. Explain the difference between ngOnInit and constructor. 
+42. What is a guard in Angular, and how do you use it in routing? 
+43. How do you handle session management in Angular? 
+44. What is Angular’s Renderer2, and why is it used? 
+45. What is server-side rendering (SSR), and why is it beneficial?
+46. How does Angular support Progressive Web Apps (PWAs)?
+47. What are NgModules, and how are they structured in Angular applications?
+48. How do you create reusable libraries in Angular?
+49. How do you secure an Angular application with authentication and authorization?
+50. What are angular zones, and how do they affect performance?
+51. How does Angular handle browser events?
+52. How do you test an Angular application using Jasmine and Karma?
+53. What is an impure pipe in Angular, and when should it be used?
+54. What is Angular Flex Layout, and how does it help with responsive design?
+55. How do you use Angular’s built-in validators for form validation?
+56. How does Angular handle asynchronous operations?
+57. What is the role of ng-content in Angular?
+58. What is Angular’s trackBy function, and how does it improve performance?
+59. How do you implement custom error handling strategies in Angular?
+60. What is Angular Material, and how do you integrate it into an application?
+61. What is the purpose of the HttpClient module in Angular?
+62. How do you manage dynamic components in Angular?
+63. What is the role of ViewChild and ContentChild in Angular?
+64. How do you perform unit testing of components and services in Angular?
