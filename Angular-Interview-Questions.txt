@@ -1,67 +1,100 @@
 ####################################################################################
-# Angular Interview Questions 2024
+# Angular Tech Questions
 ####################################################################################
-1. What is Angular, and how is it different from AngularJS? 
-2. How does the Angular CLI work? 
-3. What is two-way data binding in Angular? 
-4. Explain the role of decorators in Angular. 
-5. What are components in Angular? 
-6. How does change detection work in Angular? 
-7. What is a service in Angular, and how do you use it? 
-8. What are pipes, and how do you create a custom pipe in Angular? 
-9. What is RxJS, and how is it used in Angular? 
-10. Explain the concept of observables and promises. 
-11. What are directives in Angular, and how are they used? 
-12. What is the difference between structural and attribute directives? 
-13. What is dependency injection, and why is it important in Angular? 
-14. How do you handle forms in Angular? 
-15. What is the difference between template-driven and reactive forms? 
-16. How do you implement routing in Angular? 
-17. What is lazy loading, and how does Angular support it? 
-18. Explain Angular’s lifecycle hooks. 
-19. How do you optimize an Angular application for performance? 
-20. What is Ahead-of-Time (AOT) compilation? 
-21. How do you handle error handling in Angular? 
-22. What is Angular Universal, and why is it used? 
-23. How does Angular handle HTTP requests? 
-24. How do you use interceptors in Angular? 
-25. Explain the difference between NgModule and Component. 
-26. What is Angular Ivy, and how does it improve the framework? 
-27. What are the new features in Angular 18? 
-28. What is the purpose of Angular Elements? 
-29. What are Angular animations, and how do you implement them? 
-30. What is view encapsulation in Angular? 
-31. How does Angular handle security concerns like XSS? 
-32. How does Angular handle state management? 
-33. What are resolvers in Angular routing? 
-34. How do you debug an Angular application? 
-35. What is the difference between ngIf and hidden attributes? 
-36. How do you manage shared state between components in Angular? 
-37. What is NgZone, and how is it used in Angular? 
-38. What are custom directives in Angular? 
-39. How do you implement internationalization (i18n) in Angular? 
-40. What is content projection in Angular? 
-41. Explain the difference between ngOnInit and constructor. 
-42. What is a guard in Angular, and how do you use it in routing? 
-43. How do you handle session management in Angular? 
-44. What is Angular’s Renderer2, and why is it used? 
-45. What is server-side rendering (SSR), and why is it beneficial?
-46. How does Angular support Progressive Web Apps (PWAs)?
-47. What are NgModules, and how are they structured in Angular applications?
-48. How do you create reusable libraries in Angular?
-49. How do you secure an Angular application with authentication and authorization?
-50. What are angular zones, and how do they affect performance?
-51. How does Angular handle browser events?
-52. How do you test an Angular application using Jasmine and Karma?
-53. What is an impure pipe in Angular, and when should it be used?
-54. What is Angular Flex Layout, and how does it help with responsive design?
-55. How do you use Angular’s built-in validators for form validation?
-56. How does Angular handle asynchronous operations?
-57. What is the role of ng-content in Angular?
-58. What is Angular’s trackBy function, and how does it improve performance?
-59. How do you implement custom error handling strategies in Angular?
-60. What is Angular Material, and how do you integrate it into an application?
-61. What is the purpose of the HttpClient module in Angular?
-62. How do you manage dynamic components in Angular?
-63. What is the role of ViewChild and ContentChild in Angular?
-64. How do you perform unit testing of components and services in Angular?
+
+==========================================
+Group A - Modules, Components, Service
+=========================================
+1) What is Angular, and how is it different from AngularJS? 
+2) What is two-way data binding in Angular? 
+3) What are components and its structure? Can we load multiple SCSS files in a Component? 
+4) Explain the role of decorators (@) in Angular
+
+5) Service :
+What is the use of Service ? 
+Explain Singleton pattern.
+What is Dependency Injection (DI)?
+What is provders?
+
+6) Pipes: 
+What is pipe?
+What is pure and impure pipe? Explain with example.
+What is async pipe? Explain with example.
+Explain how to create a custom pipe?
+
+7) Directives:
+What is directives?
+What types of directives are there (Structural, Component, Attribute)? Exlain with example.
+
+8) Modules:
+What the concept of Core, Shared and Feature modules?
+If we have header, footer, and auth guard then we should use in what kind of modules (Core / Feature/ Shared)?
+What are NgModules, and how are they structured in Angular applications?
+
+9) Explain Angular’s lifecycle hooks.
+10) What are Angular animations, and how do you implement them? 
+11) What is the difference between template-driven and reactive forms?
+12) How to implement pre login and post login layout ?
+13) What is content projection in Angular?
+14) Explain the difference between ngOnInit and constructor.
+15) How to pass data from Child to Parent and vice-versa? What are other way to pass data ?
+16) What is content projection in Angular? 
+17) Explain ng-template, ng-content, ng-container
+18) ViewChild, ViewChildren, ContentChild?
+19) @HostListener, @HostBinding
+20) Explain Angular View Encapsulation with example. Explain Angular :host, :host-context, ::ng-deep
+21) How to load components dynamically? How do you components based on some API response?
+
+
+==========================================
+Group B - Architecture, Build
+==========================================
+1) How does the Angular CLI work? What are the commands
+2) What is change detection in Angular? Explain.
+3) What is Interceptors? Explain with example.
+4) How do you pass JWT token to all API call? How do you handle common  errors ?
+5) What is Just-in-Time (JIT), Ahead-of-Time (AOT) compilation? Explain difference.
+6) What is SSR (Server Side Rendering)? What is Angular Universal, and why is it used? What is the benefit of SSR?
+7) What is CSR (Client Side Rendering) ? What is advantage and disadvange of CSR and SSR?
+8) What is NgZone (Zone.js)/ Execution Zone / Global execution context? How to run code outSideAngular zone?
+9) How does Angular support Progressive Web Apps (PWAs)?
+10) How do you create reusable libraries in Angular? Low-code framework. How to host packages in NPM respository?
+11) How does Angular handle security concerns like XSS? 
+12) How does Angular handle browser events?
+13) How to implement mutiple environments?
+14) What is Web Workers and Service Workers?
+
+
+==========================================
+Group C - Performance Optimization
+==========================================
+1) How do you ensure / optimize Angular performance ?
+2) What is Lazy Loading? Why its important? How helps in performance optimization?
+3) What is Zone Pollution? How to run code outSideAngular zone? How to run code in side Angular zone?
+4) What is tree shaking / dead code removal?
+5) What is Angular Ivy, and how does it improve the framework?  
+
+
+==========================================
+Group D - Others (RxJS, NgRx)
+==========================================
+1. Explain NgRx (Redux) Architecture
+2. Explain RxJS operators (forkJoin, map, concat, mergeMap, switchMap, of)
+3. What is Promises and Observables? Explain with example and take decision which to use when.
+4. How do you implement Internationalization (i18n), Localization in Angular (ngx-translate NPM package)
+5. What is best way to import 3rd party UI components packages in angular (explain creating a single modules)
+
+
+==========================================
+Group E - Testing
+==========================================
+1) What is TDD ?
+2) What is E2E ? Basic questions related to DOM manipulation using Playwright E2E.
+3) Name some Asymmetric Matchers in Jasmine
+4) How can we disable tests in Jasmine?
+5) What is Jasmine Spy?
+6) How do we change the return value of Jasmine Spy?
+7) What are matchers? Give some examples
+8) Explain the concept of stubs in Jasmine
+9) What are the different ways to run Jasmin tests? 
+10) What are the Best practices for writing test scripts in Jasmine?
