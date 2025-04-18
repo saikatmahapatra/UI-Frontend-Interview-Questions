@@ -91,7 +91,7 @@ Group D - Others (RxJS, NgRx)
 
 
 ==========================================
-Group E - Testing
+Group E - Testing (Unit/E2E)
 ==========================================
 1) What is TDD ?
 2) What is E2E ? Basic questions related to DOM manipulation using Playwright E2E.
@@ -103,3 +103,10 @@ Group E - Testing
 8) Explain the concept of stubs in Jasmine
 9) What are the different ways to run Jasmin tests? 
 10) What are the Best practices for writing test scripts in Jasmine?
+11) How do you organize tests in Jasmin using describe and it blocks?
+12) What are the different ways to run Jasmin tests? (HTML runner, CLI)
+13) What is the difference between Jasmine and karma?
+14) Explain about Playwright E2E framework?
+15) How do you wait for an element to be visible in Playwright?
+16) How do you handle file uploads in Playwright?
+17) As a developer how you can write HTML so that Playwright can easily understand it and can generate testcases? 
