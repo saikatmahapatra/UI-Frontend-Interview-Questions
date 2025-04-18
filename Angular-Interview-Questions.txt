@@ -7,7 +7,7 @@ Group A - Modules, Components, Service
 =========================================
 1) What is Angular, and how is it different from AngularJS? 
 2) What is two-way data binding in Angular? 
-3) What are components and its structure? Can we load multiple SCSS files in a Component? 
+3) What are Components and it's structure? Can we load multiple SCSS files in a Component? 
 4) Explain the role of decorators (@) in Angular
 
 5) Service :
@@ -15,6 +15,8 @@ What is the use of Service ?
 Explain Singleton pattern.
 What is Dependency Injection (DI)?
 What is provders?
+If I use a provider in a Module and use the Service in 10 components of that module, then how many service Instance will be created?
+How can you use a service without instanciting inside constructor ?
 
 6) Pipes: 
 What is pipe?
@@ -44,6 +46,8 @@ What are NgModules, and how are they structured in Angular applications?
 19) @HostListener, @HostBinding
 20) Explain Angular View Encapsulation with example. Explain Angular :host, :host-context, ::ng-deep
 21) How to load components dynamically? How do you components based on some API response?
+22) How many types of Forms are there in Angular? What would be a preferable way to writing validation? For signup page if you want to check username exists or not what kind of validation you want to implement explain with example.
+23) How do you implement a Loader (custom loading text or an image)? In which Moduel you should import the LoaderService?
 
 
 ==========================================
@@ -63,6 +67,7 @@ Group B - Architecture, Build
 12) How does Angular handle browser events?
 13) How to implement mutiple environments?
 14) What is Web Workers and Service Workers?
+15) What is Signal? Give a exmaple. How it helps in Recative programming?
 
 
 ==========================================
