@@ -1,0 +1,124 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <title>Checkbox</title>
+    <style>
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul ul {
+            margin: 0 0 0 30px;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <main class="container">
+        <h1>Checkbox</h1>
+        <ul id="root"></ul>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <script>
+            var data = {
+            id: 0,
+            title: "root - not displayed",
+            children: [{
+                id: 1,
+                title: "Option 1",
+                children: [{
+                    id: 11,
+                    title: "Option 11",
+                    children: [{
+                        id: 111,
+                        title: "Option 111"
+                    }, {
+                        id: 112,
+                        title: "Option 112"
+                    }]
+                }, {
+                    id: 12,
+                    title: "Option 12"
+                }]
+            }, {
+                id: 2,
+                title: "Option 2",
+                children: [{
+                    id: 21,
+                    title: "Option 21"
+                }, {
+                    id: 22,
+                    title: "Option 22"
+                }]
+            }, {
+                id: 3,
+                title: "Option 3",
+                children: [{
+                    id: 0,
+                    title: "Option 31"
+                }, {
+                    id: 0,
+                    title: "Option 32"
+                }]
+            }]
+        };
+        
+        function addItem(parentUL, branch) {
+            for (var key in branch.children) {
+                var item = branch.children[key];
+                $item = $('<li>', {
+                    id: "item" + item.id
+                });
+                $item.append($('<input>', {
+                    type: "checkbox",
+                    id: "item" + item.id,
+                    name: "item" + item.id
+                }));
+                $item.append($('<label>', {
+                    for: "item" + item.id,
+                    text: item.title
+                }));
+                parentUL.append($item);
+                if (item.children) {
+                    var $ul = $('<ul>', {
+                        style: 'display: none'
+                    }).appendTo($item);
+                    addItem($ul, item);
+                }
+            }
+        }
+        
+        $(function () {
+            addItem($('#root'), data);
+            $(':checkbox').change(function () {
+                $(this).closest('li').children('ul').slideToggle();
+            });
+            $('label').click(function(){
+                $(this).closest('li').find(':checkbox').trigger('click');
+            });
+        });
+        </script>
+</body>
+
+</html>

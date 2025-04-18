@@ -1,0 +1,292 @@
+#app {
+  font-family: sans-serif;
+  padding: 1em;
+}
+
+#clock {
+  text-align: center;
+  font-size: 48px;
+}
+
+.col {
+  margin: 4px;
+}
+
+
+App.jsx
+=======
+import { useState } from 'react';
+import './index.scss';
+
+const App = () => {
+  const [hours, setHours] = useState('00');
+  const [minutes, setMinutes] = useState('00');
+  const updateHrUp =() => {
+    let hr = Number(hours) + 1;
+    hr = hr > 24 ? 0 :  hr;
+    setHours(hr.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
+);
+  }
+  const updateHrDown =() => {
+    let hr = Number(hours) - 1;
+    hr = hr < 0 ? 24 :  hr;
+    setHours(hr.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
+);
+  }
+  const updateMinUp =() => {
+    let min = Number(minutes) + 1;
+    min = min > 59 ? 0 :  min;
+    setMinutes(min.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
+);
+  }
+  const updateMinDown =() => {
+    let min = Number(minutes) -1;
+    min = min < 0 ? 59 :  min;
+    setMinutes(min.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
+);
+  }
+  
+  const timeAdjust = ()=> {
+    let hr = Number(hours);
+    let min = Number(minutes);
+    if(hr == 24 && min == 0) {
+      
+    }
+  }
+  
+  return (
+    <div id="ClockUpdater" className="container">
+      <div className="row">
+        <button
+        onClick={updateHrUp}
+          id="hours-up-button"
+          className="btn btn-outline-primary col"
+        >
+          &uarr;
+        </button>
+
+        { /* Level 1: Add your code here */ }
+        <button id="minutes-up-button" 
+        className="btn btn-outline-primary col" onClick={updateMinUp}>&uarr;</button>
+      </div>
+
+      <div className="row">
+        <div id="clock" className="badge badge-primary col">
+          {`${hours}:${minutes}`}
+        </div>
+      </div>
+
+      <div className="row">
+        <button
+        onClick={updateHrDown}
+          id="hours-down-button"
+          className="btn btn-outline-primary col"
+        >
+          &darr;
+        </button>
+
+      { /* Level 1: Add your code here */ }
+      <button id="minutes-down-button" className="btn btn-outline-primary col" onClick={updateMinDown}>&darr;</button>
+      </div>
+    </div>
+  );
+};
+
+export default App;
+
+
+
+index.jsx
+=======
+import { createRoot } from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('app');
+if (!rootElement) throw new Error("Root element 'app' not found.");
+const root = createRoot(rootElement);
+root.render(<App />);
+
+
+test/bootstrap.test.js
+
+
+import puppeteer from 'puppeteer';
+
+before(async function () {
+  global.browser = await puppeteer.launch({
+    headless: 'shell',
+    args: [
+      '--autoplay-policy=user-gesture-required',
+      '--disable-background-networking',
+      '--disable-background-timer-throttling',
+      '--disable-backgrounding-occluded-windows',
+      '--disable-breakpad',
+      '--disable-client-side-phishing-detection',
+      '--disable-component-update',
+      '--disable-default-apps',
+      '--disable-dev-shm-usage',
+      '--disable-domain-reliability',
+      '--disable-extensions',
+      '--disable-features=AudioServiceOutOfProcess',
+      '--disable-hang-monitor',
+      '--disable-ipc-flooding-protection',
+      '--disable-notifications',
+      '--disable-offer-store-unmasked-wallet-cards',
+      '--disable-popup-blocking',
+      '--disable-print-preview',
+      '--disable-prompt-on-repost',
+      '--disable-renderer-backgrounding',
+      '--disable-setuid-sandbox',
+      '--disable-speech-api',
+      '--disable-sync',
+      '--hide-scrollbars',
+      '--ignore-gpu-blacklist',
+      '--metrics-recording-only',
+      '--mute-audio',
+      '--no-default-browser-check',
+      '--no-first-run',
+      '--no-pings',
+      '--no-sandbox',
+      '--no-zygote',
+      '--password-store=basic',
+      '--use-gl=swiftshader',
+      '--use-mock-keychain',
+    ],
+    timeout: 0,
+  });
+});
+
+after(async function () {
+  await global.browser.close();
+});
+
+
+
+level1.test.js
+---------
+import { expect } from 'chai';
+
+describe('Level 1 - Clock updater', () => {
+  let page;
+
+  let hoursUpButton, hoursDownButton;
+  let minutesUpButton, minutesDownButton;
+
+  const getClockValue = async () => {
+    return await page.$eval('#clock', (node) => node.innerHTML);
+  };
+
+  before(async function () {
+    this.timeout(0);
+    page = await global.browser.newPage();
+    await page.setDefaultNavigationTimeout(0);
+    await page.goto('http://localhost:3000', { waitUntil: 'load', timeout: 10000 });
+    await page.waitForNetworkIdle({ idleTime: 2000, timeout: 5000 });
+  });
+
+  after(async function () {
+    await page.close();
+  });
+
+  it('has all four buttons', async () => {
+    // wait for loading the page
+    await page.waitForSelector('#clock', { timeout: 1500 });
+
+    hoursUpButton = await page.$('#hours-up-button');
+    hoursDownButton = await page.$('#hours-down-button');
+    minutesUpButton = await page.$('#minutes-up-button');
+    minutesDownButton = await page.$('#minutes-down-button');
+    expect(hoursUpButton).not.equal(null);
+    expect(hoursDownButton).not.equal(null);
+    expect(minutesUpButton).not.equal(null);
+    expect(minutesDownButton).not.equal(null);
+  }).timeout(5000);
+
+  it('has the default state', async () => {
+    expect(await getClockValue()).to.equal('00:00');
+  }).timeout(5000);
+
+});
+
+
+sample.test.js
+--------------
+import { expect } from 'chai';
+
+describe('Sample test', function () {
+  let page;
+
+  before(async function () {
+    this.timeout(0);
+    page = await global.browser.newPage();
+    await page.setDefaultNavigationTimeout(0);
+    await page.goto('http://localhost:3000', { waitUntil: 'load', timeout: 10000 });
+    await page.waitForNetworkIdle({ idleTime: 2000, timeout: 5000 });
+  });
+
+  after(async function () {
+    await page.close();
+  });
+
+  it('sample test', async () => {
+    // sample test
+  });
+});
+
+
+
+
+package.json
+-------------
+{
+  "name": "react-application",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "prettier": "^3.0.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "sass": "^1.57.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "chai": "^4.4.1",
+    "mocha": "^10.3.0",
+    "puppeteer": "^22.8.2",
+    "vite": "^5.1.4"
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "prettier": "npx prettier --write *"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
+
+
+vite.config.js
+----------
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  server: {
+    allowedHosts: true,
+    host: '0.0.0.0',
+    port: 3000
+  },
+  plugins: [react()]
+})
