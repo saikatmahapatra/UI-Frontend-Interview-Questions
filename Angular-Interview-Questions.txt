@@ -29,7 +29,7 @@ What is directives?
 What types of directives are there (Structural, Component, Attribute)? Exlain with example.
 
 8) Modules:
-What the concept of Core, Shared and Feature modules?
+What is the architectural concept of Core, Shared and Feature modules?
 If we have header, footer, and auth guard then we should use in what kind of modules (Core / Feature/ Shared)?
 What are NgModules, and how are they structured in Angular applications?
 
