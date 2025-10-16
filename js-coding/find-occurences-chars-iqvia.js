@@ -1,3 +1,11 @@
+/**
+ * Find occurence of characters in a string and print them in descending order of their occurence.
+ * str = 'neeraj is a good javascript developer'
+ * expected output: 5e,4a,3or,2dijpsv,1cglnt
+ * 
+ */
+
+
 function countOccurrences() {
     let str = 'neeraj is a good javascript developer';
     // expected output: 5e,4a,3or,2dijpsv,1cglnt
